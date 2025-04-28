@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+    <title>CS50 for Lawyers</title>
+    <link rel="stylesheet" href="course1.css">
+    <script>
+        function toggleCart() {
+            const cartAside = document.querySelector('.cart-aside');
+            cartAside.classList.toggle('visible');
+        }
+
+        function closeCart() {
+            const cartAside = document.querySelector('.cart-aside');
+            cartAside.classList.remove('visible');
+        }
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        function addToCart(courseName) {
+            let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            if (!purchasedItems.includes(courseName)) {
+                const cartContent = document.querySelector('.cart-content ul');
+                const listItem = document.createElement('li');
+                listItem.textContent = courseName;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-button');
+                removeButton.onclick = function() {
+                    removeFromCart(courseName);
+                };
+                listItem.appendChild(removeButton);
+
+                cartContent.appendChild(listItem);
+
+                purchasedItems.push(courseName);
+                localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+            }
+        }
+
+        function removeFromCart(courseName) {
+            let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            purchasedItems = purchasedItems.filter(item => item !== courseName);
+            localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+            loadCart();
+        }
+
+        function loadCart() {
+            const cartContent = document.querySelector('.cart-content ul');
+            cartContent.innerHTML = '';
+            const purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            purchasedItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-button');
+                removeButton.onclick = function() {
+                    removeFromCart(item);
+                };
+                listItem.appendChild(removeButton);
+
+                cartContent.appendChild(listItem);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCart);
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-and-name">
+            <span class="company-name">📖 LearnHub</span>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <h2><a href="index.html">Home</a></h2>
+                <h2><a href="about.html">About</a></h2>
+                <div class="dropdown">
+                    <h2><a href="courses.html">Courses</a></h2>
+                    <div class="dropdown-menu">
+                        <h2><a href="course1.html">CS50: Computer Science</a></h2>
+                        <h2><a href="course2.html">CS50: Python</a></h2>
+                        <h2><a href="course3.html">Exercising Leadership</a></h2>
+                        <h2><a href="course4.html">Entrepreneurship Essentials</a></h2>
+                        <h2><a href="course5.html">Contract Law</a></h2>
+                        <h2><a href="course6.html">CS50 for Lawyers</a></h2>
+                        <h2><a href="course7.html">Using Python for Research</a></h2>
+                        <h2><a href="course8.html">MLOps for Scaling TinyML</a></h2>
+                        <h2><a href="course9.html">Authentic Leadership</a></h2>
+                        <h2><a href="course10.html">Advanced Business Strategy</a></h2>
+                        <h2><a href="course11.html">Financial Analysis and Valuation for Lawyers</a></h2>
+                        <h2><a href="course12.html">AI and the Law</a></h2>
+                    </div>
+                </div>
+                <h2><a href="contact.html">Contact</a></h2>
+                <h2><a href="#" onclick="toggleCart(event)"><img src="courseImage/cart.png" alt="Shopping Cart" class="cart-icon"></a></h2>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart Aside -->
+    <aside class="cart-aside">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button onclick="closeCart()" class="close-button">&times;</button>
+        </div>
+        <div class="cart-content">
+            <ul>
+                <!-- Purchased items will be listed here -->
+            </ul>
+            <button onclick="window.location.href='purchase.html'" class="purchase-button">Purchase</button>
+        </div>
+    </aside>
+
+    <!-- Title Section -->
+    <section class="title-section" style="background-image: url('courseImage/cs50L.jpg'); background-size: cover; background-position: center;">
+        <div class="title-split">
+            <div class="left-side">
+                <div class="topL">
+                    <h1>CS50 for Lawyers</h1>
+                    <h4>This course is a variant of Harvard University's introduction to computer science, CS50, designed especially for lawyers (and law students). </h4>
+                </div>
+                <div class="bottomL">
+                    <button onclick="addToCart('CS50 for Lawyers')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topR">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nrB1aMKgjvU?si=IugsnE0s0N5vMg0v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                <div class="bottomR">
+                    <h4>Self-Paced</h4>
+                    <hr>
+                    <p>Free <br>Length: 10 weeks<br>3 - 6  hours a week</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="course6.html">CS50 for Lawyers</a></li>
+        </ol>
+    </section>
+
+    <!-- What section -->
+    <section class="what"> 
+        <h2>What You'll Learn</h2>
+        <p>This course is a variant of Harvard University's introduction to computer science, CS50, designed especially for lawyers (and law students). Whereas CS50 itself takes a bottom-up approach, emphasizing mastery of low-level concepts and implementation details thereof, this course takes a top-down approach, emphasizing mastery of high-level concepts and design decisions related thereto. Ultimately, it equips students with a deeper understanding of the legal implications of technological decisions made by clients.</p>
+        <br>
+        <p>Through a mix of technical instruction and discussion of case studies, this course empowers students to be informed contributors to technology-driven conversations. In addition, it prepares students to formulate technology-informed legal arguments and opinions. Along the way, it equips students with hands-on experience with Python and SQL, languages via which they can mine data for answers themselves.</p>
+        <br>
+        <p>Topics include algorithms, cloud computing, databases, networking, privacy, programming, scalability, security, and more, with a particular emphasis on understanding how the work developers do and the technological solutions they employ may impact clients. Students emerge from this course with a first-hand appreciation of how it all works and all the more confident in the factors that should guide their decision-making.</p>
+        <br><br><br><br>
+        <ul type="number">
+            <li>How to identify and unbundle complex challenges</li>
+            <li>How to understand the role of formal and informal authority</li>
+            <li>How to identify the key perspectives of stakeholders</li>
+            <li>How to build and renew trust relationships</li>
+            <li>How to approach conflict</li>
+            <li>How to implement personal strategies for surviving and thriving amidst change</li>
+        </ul>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="instructors">
+        <h1>Your Instructor</h1>
+        <div class="instructor-boxes">
+            <div class="instructor-box">
+                <img src="courseImage\malan-sq.jpg.webp">
+                <h2>David J.Malin</h2>
+                <p>Gordon McKay Professor of the Practice of Computer Science, Harvard John A. Paulson School of Engineering and Applied Sciences</p>
+            </div>
+            <div class="instructor-box">
+                <img src="courseImage\doug-lloyd110x110.jpg.webp">
+                <h2>Doug Lloyd</h2>
+                <p>Senior Preceptor in Computer Science, Harvard University</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Related Courses Section -->
+    <section class="related-courses">
+        <h1>Related Courses</h1>
+        <div class="course-boxes">
+            <a href="course5.html" class="course-box">
+                <img src="courseImage/Contract Law.webp" alt="Course 1">
+                <div class="course-info">
+                    <h4>Contract Law: From Trust to Promise to Contract</h4>
+                    <p>Contracts are a part of our everyday life, arising in collaboration, trust, promise and credit.</p>
+                    <p class="additional-info">$1,600 | 8 weeks long | Available Now</p>
+                </div>
+            </a>
+            <a href="course6.html" class="course-box">
+                <img src="courseImage/cs50L.jpg" alt="Course 1">
+                <div class="course-info">
+                    <h4>CS50 for Lawyers</h4>
+                    <p>This course is Harvard University's introduction to computer science, CS50, designed for lawyers.</p>
+                    <p class="additional-info">Free | 10 weeks long | Available now</p>
+                </div>
+            </a>
+            <a href="course11.html" class="course-box">
+                <img src="courseImage/Financial Analysis and Valuation for Lawyers.jpeg" alt="Course 1">
+                <div class="course-info">
+                    <h4>Financial Analysis and Valuation for Lawyers</h4>
+                    <p>Designed to help you navigate your organization or client’s financial goals.</p>
+                    <p class="additional-info">$1,600 | 6 weeks long | Available now</p>
+                </div>
+            </a>
+            <a href="course12.html" class="course-box">
+                <img src="courseImage/AI and the Law.png" alt="Course 1">
+                <div class="course-info">
+                    <h4>AI and the Law: Navigating the New Legal Landscape</h4>
+                    <p>Gain the knowledge and tools to navigate the changes brought on by AI.</p>
+                    <p class="additional-info">$5,850 | 15 weeks long | Open May 7</p>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-subscribe">
+                <h3>Subscribe to our newsletter</h3>
+                <p>Stay updated with the latest courses and resources.</p>
+                <form action="#" class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>&copy; 2025 LearnHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

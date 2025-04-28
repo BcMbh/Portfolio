@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<head>
+    <title>Course1</title>
+    <link rel="stylesheet" href="course1.css">
+    <script>
+        function toggleCart() {
+            const cartAside = document.querySelector('.cart-aside');
+            cartAside.classList.toggle('visible');
+        }
+
+        function closeCart() {
+            const cartAside = document.querySelector('.cart-aside');
+            cartAside.classList.remove('visible');
+        }
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        function addToCart(courseName) {
+            let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            if (!purchasedItems.includes(courseName)) {
+                const cartContent = document.querySelector('.cart-content ul');
+                const listItem = document.createElement('li');
+                listItem.textContent = courseName;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-button');
+                removeButton.onclick = function() {
+                    removeFromCart(courseName);
+                };
+                listItem.appendChild(removeButton);
+
+                cartContent.appendChild(listItem);
+
+                purchasedItems.push(courseName);
+                localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+            }
+        }
+
+        function removeFromCart(courseName) {
+            let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            purchasedItems = purchasedItems.filter(item => item !== courseName);
+            localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+            loadCart();
+        }
+
+        function loadCart() {
+            const cartContent = document.querySelector('.cart-content ul');
+            cartContent.innerHTML = '';
+            const purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            purchasedItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-button');
+                removeButton.onclick = function() {
+                    removeFromCart(item);
+                };
+                listItem.appendChild(removeButton);
+
+                cartContent.appendChild(listItem);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCart);
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-and-name">
+            <span class="company-name">📖 LearnHub</span>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <h2><a href="index.html">Home</a></h2>
+                <h2><a href="about.html">About</a></h2>
+                <div class="dropdown">
+                    <h2><a href="courses.html">Courses</a></h2>
+                    <div class="dropdown-menu">
+                        <h2><a href="course1.html">CS50: Computer Science</a></h2>
+                        <h2><a href="course2.html">CS50: Python</a></h2>
+                        <h2><a href="course3.html">Exercising Leadership</a></h2>
+                        <h2><a href="course4.html">Entrepreneurship Essentials</a></h2>
+                        <h2><a href="course5.html">Contract Law</a></h2>
+                        <h2><a href="course6.html">CS50 for Lawyers</a></h2>
+                        <h2><a href="course7.html">Using Python for Research</a></h2>
+                        <h2><a href="course8.html">MLOps for Scaling TinyML</a></h2>
+                        <h2><a href="course9.html">Authentic Leadership</a></h2>
+                        <h2><a href="course10.html">Advanced Business Strategy</a></h2>
+                        <h2><a href="course11.html">Financial Analysis and Valuation for Lawyers</a></h2>
+                        <h2><a href="course12.html">AI and the Law</a></h2>
+                    </div>
+                </div>
+                <h2><a href="contact.html">Contact</a></h2>
+                <h2><a href="#" onclick="toggleCart(event)"><img src="courseImage/cart.png" alt="Shopping Cart" class="cart-icon"></a></h2>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart Aside -->
+    <aside class="cart-aside">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button onclick="closeCart()" class="close-button">&times;</button>
+        </div>
+        <div class="cart-content">
+            <ul>
+                <!-- Purchased items will be listed here -->
+            </ul>
+            <button onclick="window.location.href='purchase.html'" class="purchase-button">Purchase</button>
+        </div>
+    </aside>
+
+    <!-- Title Section -->
+    <section class="title-section" style="background-image: url('courseImage/ComputerScience.jpg'); background-size: cover; background-position: center;">
+        <div class="title-split">
+            <div class="left-side">
+                <div class="topL">
+                    <h1>CS50: Introduction to Computer Science</h1>
+                    <h4>This is CS50x <br><br>
+                        An introduction to the intellectual enterprises of computer science and the art of programming in an online course from partnership with Harvard.</h4>
+                </div>
+                <div class="bottomL">
+                    <button onclick="addToCart('CS50: Introduction to Computer Science')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topR">
+                    <iframe src="https://www.youtube.com/embed/ib4NNsp2qW4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="bottomR">
+                    <h4>Self-Paced</h4>
+                    <hr>
+                    <p>Free <br>Length: 11 weeks<br>10-20 hours a week</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="course1.html">CS50: Introduction to Computer Science</a></li>
+        </ol>
+    </section>
+
+    <!-- What section -->
+    <section class="what"> 
+        <h2>What You'll Learn</h2>
+        <p>This is CS50x, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. The on-campus version of CS50x, CS50, is Harvard's largest course.</p>        
+        <br>
+        <p>Students who earn a satisfactory score on 9 problem sets (i.e., programming assignments) and a final project are eligible for a certificate. This is a self-paced course–you may take CS50x on your own schedule.</p>
+        <br><br><br><br>
+        <ul type="number">
+            <li>A broad and robust understanding of computer science and programming</li>
+            <li>How to think algorithmically and solve programming problems efficiently</li>
+            <li>Concepts like abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development</li>
+        </ul>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="instructors">
+        <h1>Your Instructor</h1>
+        <div class="instructor-boxes">
+            <div class="instructor-box">
+                <img src="courseImage\malan-sq.jpg.webp">
+                <h2>David J. Malan</h2>
+                <p>Gordon McKay Professor of the Practice of Computer Science, Harvard John A. Paulson School of Engineering and Applied Sciences</p>
+            </div>
+            <div class="instructor-box">
+                <img src="courseImage\doug-lloyd110x110.jpg.webp">
+                <h2>Doug Lloyd</h2>
+                <p>Senior Preceptor in Computer Science, Harvard University</p>
+            </div>
+            <div class="instructor-box">
+                <img src="courseImage\Brian_Yu.png.webp">
+                <h2>Brian Yu</h2>
+                <p>Senior Preceptor in Computer Science, Harvard University</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Courses Section -->
+    <section class="related-courses">
+        <h1>Related Courses</h1>
+        <div class="course-boxes">
+            <a href="course1.html" class="course-box">
+                <img src="courseImage/ComputerScience.jpg" alt="Course 1">
+                <div class="course-info">
+                    <h4>CS50: Introduction to Computer Science</h4>
+                    <p>An introduction to the intellectual enterprises of computer science and the art of programming.</p>
+                    <p class="additional-info">Free | 11 weeks long | Available now</p>
+                </div>
+            </a>
+            <a href="course2.html" class="course-box">
+                <img src="courseImage/python.jpg">
+                <div class="course-info">
+                    <h4>CS50: Introduction to Python</h4>
+                    <p>A popular language for general-purpose programming, data science, web programming, and more.</p>
+                    <p class="additional-info">Free | 9 weeks long | Available now</p>
+                </div>
+            </a>
+            <a href="course7.html" class="course-box">
+                <img src="courseImage/research.png" alt="Course 1">
+                <div class="course-info">
+                    <h4>Using Python for Research</h4>
+                    <p>Take your Python programming to the next level with Python 3 for your research.</p>
+                    <p class="additional-info">1 weeks long | Available now</p>
+                </div>
+            </a>
+            <a href="course8.html" class="course-box">
+                <img src="courseImage/tinyML.webp" alt="Course 1">
+                <div class="course-info">
+                    <h4>MLOps for Scaling TinyML</h4>
+                    <p>Learners explore best practices to deploy, monitor, and maintain Machine Learning models.</p>
+                    <p class="additional-info">7 weeks long | Available now</p>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-subscribe">
+                <h3>Subscribe to our newsletter</h3>
+                <p>Stay updated with the latest courses and resources.</p>
+                <form action="#" class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>&copy; 2025 LearnHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

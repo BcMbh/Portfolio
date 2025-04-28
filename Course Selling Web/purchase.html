@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <title>Purchase</title>
+    <link rel="stylesheet" href="purchase.css">
+    <script>
+        const prices = {
+            "CS50: Introduction to Computer Science": 0,
+            "CS50: Introduction to Python": 0,
+            "Exercising Leadership: Foundational Principles": 1850,
+            "Entrepreneurship Essentials": 1850,
+            "Contract Law: From Trust to Promise to Contract": 1600,
+            "CS50 for Lawyers": 0,
+            "Using Python for Research": 0,
+            "MLOps for Scaling TinyML": 0,
+            "Authentic Leadership": 1570,
+            "Advanced Business Strategy": 2950,
+            "Financial Analysis and Valuation for Lawyers": 1600,
+            "AI and the Law: Navigating the New Legal Landscape": 5850
+        };
+
+        function checkLogin() {
+            const username = localStorage.getItem('username');
+            if (!username) {
+                window.location.href = 'login-page.html';
+            } else {
+                document.getElementById('username').textContent = username;
+                loadCart();
+            }
+        }
+
+        function removeFromCart(courseName) {
+            let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            purchasedItems = purchasedItems.filter(item => item !== courseName);
+            localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+            loadCart();
+        }
+
+        function loadCart() {
+            const cartContent = document.getElementById('cart-content');
+            cartContent.innerHTML = '';
+            const purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            let totalPrice = 0;
+
+            purchasedItems.forEach(item => {
+                const row = document.createElement('tr');
+
+                const itemName = document.createElement('td');
+                itemName.textContent = item;
+                row.appendChild(itemName);
+
+                const itemPrice = document.createElement('td');
+                if (prices[item] !== undefined) {
+                    itemPrice.textContent = `$${prices[item]}`;
+                    totalPrice += prices[item];
+                } else {
+                    itemPrice.textContent = 'N/A';
+                }
+                row.appendChild(itemPrice);
+
+                const removeButtonCell = document.createElement('td');
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-button');
+                removeButton.onclick = function() {
+                    removeFromCart(item);
+                };
+                removeButtonCell.appendChild(removeButton);
+                row.appendChild(removeButtonCell);
+
+                cartContent.appendChild(row);
+            });
+
+            document.getElementById('total-price').textContent = `Total Price: $${totalPrice}`;
+            document.querySelector('.purchase-button').disabled = purchasedItems.length === 0;
+        }
+
+        function handlePurchase() {
+            const purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            if (purchasedItems.length > 0) {
+                window.location.href = 'purchaseDone.html';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', checkLogin);
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Purchase Page</h1>
+        <p>Hello, <span id="username"></span></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-content">
+                <!-- Cart items will be loaded here -->
+            </tbody>
+        </table>
+        <p id="total-price" class="total-price">Total Price: $0</p>
+        <button class="purchase-button" onclick="handlePurchase()" disabled>Purchase</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Feedback Page</title>
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+    
+    <section class="feedback-section">
+        <h2>Share Your Feedback</h2>
+        <p>We value your input. Please share your thoughts and rate your experience with us.</p>
+
+        <!-- Feedback Form -->
+        <form class="feedback-form">
+            <textarea placeholder="Write your comment here..." required></textarea>
+            <div class="rating-container">
+                <label for="rating">Rate Us:</label>
+                <select id="rating" name="rating" required>
+                    <option value="" disabled selected>Select Rating</option>
+                    <option value="1">⭐ - Poor</option>
+                    <option value="2">⭐⭐ - Fair</option>
+                    <option value="3">⭐⭐⭐ - Good</option>
+                    <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                    <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                </select>
+            </div>
+            <a href="loading-success.html" class="back-home-btn">Submit</a>
+        </form>
+
+    </section>
+</body>
+</html>

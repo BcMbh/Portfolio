@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Manage member</title>
+    <link rel="stylesheet" href="css/admin-page.css">
+    <style>
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            flex: 1;
+            font-family: "Kumbh Sans", serif;
+        }
+        
+        h3{
+            margin-left: 20px;
+        }
+        #users {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        #user-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    
+        #user-form input,
+        #user-form button {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            font-family: "Kumbh Sans", serif;
+        }
+    
+        #user-form button {
+            background-color: #0f437f;
+            color: white;
+            cursor: pointer;
+            font-family: "Kumbh Sans", serif;
+        }
+    
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        .table th,
+        .table td {
+            border: 1px solid lightgray;
+            padding: 10px;
+            text-align: left;
+        }
+    
+        .table th {
+            background-color: whitesmoke;
+            font-weight: bold;
+        }
+    
+        .button {
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            background-color: #ff9800;
+        }
+        .button.delete {
+            background-color: red;
+        }
+        
+        .button:hover {
+            opacity: 0.8;
+        }
+    </style>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="header-name">
+            <h2>LearnHub</h2>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for name...">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        
+        <div class="admin-profile">
+            <img src="image/human-icon.jpg" alt="Admin profile picture">
+            <span>Admin</span>
+            <div class="dropdown">
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+                <ul class="dropdown-menu">
+                    <li><a href="admin-profile.html">Admin Profile</a></li>
+                    <hr>
+                    <li><a href="admin-sales-report.html">Sales Report</a></li>
+                    <li><a href="login-page.html">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <ul class="menu-items">
+            <li><a href="admin-page.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="admin-staff.html"><i class="fas fa-users"></i> Staff</a></li>
+            <li class="active"><a href="#"><i class="fas fa-user"></i> Member</a></li>
+            <li><a href="admin-courses.html"><i class="fas fa-book"></i> Course</a></li>
+            <li><a href="admin-category.html"><i class="fas fa-folder"></i> Category Course</a></li>
+            <li><a href="admin-booking.html"><i class="fas fa-calendar"></i> Booking</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h3>Add New Member</h3>
+        <section id="users">
+            <form id="user-form">
+                <input type="text" id="user-name" placeholder="Name" required>
+                <input type="text" id="user-info" placeholder="Info" required>
+                <button type="submit" class="button">Add/Save</button>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+
+    <script>
+        let users = [{ id: 1, name: "USER", info: "0123456789" }];
+        let editIndex = null;
+    
+        function renderUsers() {
+            const tbody = document.querySelector("#users tbody");
+            tbody.innerHTML = "";
+            users.forEach((user, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${user.id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.info}</td>
+                    <td>
+                        <button class="button" onclick="editUser(${index})">Edit</button>
+                        <button class="button delete" onclick="deleteUser(${index})">Delete</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+    
+        function addUser(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById("user-name");
+            const infoInput = document.getElementById("user-info");
+            const name = nameInput.value;
+            const info = infoInput.value;
+    
+            if (editIndex !== null) {
+                users[editIndex].name = name;
+                users[editIndex].info = info;
+                editIndex = null;
+            } else {
+                const newUser = {
+                    id: users.length ? users[users.length - 1].id + 1 : 1,
+                    name,
+                    info
+                };
+                users.push(newUser);
+            }
+    
+            nameInput.value = "";
+            infoInput.value = "";
+            renderUsers();
+        }
+    
+        function editUser(index) {
+            editIndex = index;
+            const user = users[index];
+            document.getElementById("user-name").value = user.name;
+            document.getElementById("user-info").value = user.info;
+        }
+    
+        function deleteUser(index) {
+            users.splice(index, 1);
+            renderUsers();
+        }
+    
+        window.onload = () => {
+            document.getElementById("user-form").addEventListener("submit", addUser);
+            renderUsers();
+        };
+    </script>
+
+</html>

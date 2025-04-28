@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<head>
+    <title>Advanced Business Strategy: Gaining a Competitive Edge</title>
+    <link rel="stylesheet" href="course1.css">
+    <script>
+        function toggleCart() {
+            const cartAside = document.querySelector('.cart-aside');
+            cartAside.classList.toggle('visible');
+        }
+
+        function closeCart() {
+            const cartAside = document.querySelector('.cart-aside');
+            cartAside.classList.remove('visible');
+        }
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        function addToCart(courseName) {
+            let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            if (!purchasedItems.includes(courseName)) {
+                const cartContent = document.querySelector('.cart-content ul');
+                const listItem = document.createElement('li');
+                listItem.textContent = courseName;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-button');
+                removeButton.onclick = function() {
+                    removeFromCart(courseName);
+                };
+                listItem.appendChild(removeButton);
+
+                cartContent.appendChild(listItem);
+
+                purchasedItems.push(courseName);
+                localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+            }
+        }
+
+        function removeFromCart(courseName) {
+            let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            purchasedItems = purchasedItems.filter(item => item !== courseName);
+            localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+            loadCart();
+        }
+
+        function loadCart() {
+            const cartContent = document.querySelector('.cart-content ul');
+            cartContent.innerHTML = '';
+            const purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+            purchasedItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-button');
+                removeButton.onclick = function() {
+                    removeFromCart(item);
+                };
+                listItem.appendChild(removeButton);
+
+                cartContent.appendChild(listItem);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCart);
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-and-name">
+            <span class="company-name">📖 LearnHub</span>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <h2><a href="index.html">Home</a></h2>
+                <h2><a href="about.html">About</a></h2>
+                <div class="dropdown">
+                    <h2><a href="courses.html">Courses</a></h2>
+                    <div class="dropdown-menu">
+                        <h2><a href="course1.html">CS50: Computer Science</a></h2>
+                        <h2><a href="course2.html">CS50: Python</a></h2>
+                        <h2><a href="course3.html">Exercising Leadership</a></h2>
+                        <h2><a href="course4.html">Entrepreneurship Essentials</a></h2>
+                        <h2><a href="course5.html">Contract Law</a></h2>
+                        <h2><a href="course6.html">CS50 for Lawyers</a></h2>
+                        <h2><a href="course7.html">Using Python for Research</a></h2>
+                        <h2><a href="course8.html">MLOps for Scaling TinyML</a></h2>
+                        <h2><a href="course9.html">Authentic Leadership</a></h2>
+                        <h2><a href="course10.html">Advanced Business Strategy</a></h2>
+                        <h2><a href="course11.html">Financial Analysis and Valuation for Lawyers</a></h2>
+                        <h2><a href="course12.html">AI and the Law</a></h2>
+                    </div>
+                </div>
+                <h2><a href="contact.html">Contact</a></h2>
+                <h2><a href="#" onclick="toggleCart(event)"><img src="courseImage/cart.png" alt="Shopping Cart" class="cart-icon"></a></h2>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart Aside -->
+    <aside class="cart-aside">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button onclick="closeCart()" class="close-button">&times;</button>
+        </div>
+        <div class="cart-content">
+            <ul>
+                <!-- Purchased items will be listed here -->
+            </ul>
+            <button onclick="window.location.href='purchase.html'" class="purchase-button">Purchase</button>
+        </div>
+    </aside>
+
+    <!-- Title Section -->
+    <section class="title-section" style="background-image: url('courseImage/Advanced\ Business\ Strateggy.jpg'); background-size: cover; background-position: center;">
+        <div class="title-split">
+            <div class="left-side">
+                <div class="topL">
+                    <h1>Advanced Business Strategy: Gaining a Competitive Edge</h1>
+                    <h4>Learn a new framework for developing a business strategy that maximizes your competitive advantage and disrupts the competition. </h4>
+                </div>
+                <div class="bottomL">
+                    <button onclick="addToCart('Advanced Business Strategy: Gaining a Competitive Edge')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topR">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iuYlGRnC7J8?si=yP8DFmNWIn2CtTj_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <div class="bottomR">
+                    <h4>Self-Paced</h4>
+                    <hr>
+                    <p>$2,950 <br>Length: 5 weeks<br>Open Jan 29</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="course3.html">Advanced Business Strategy: Gaining a Competitive Edge</a></li>
+        </ol>
+    </section>
+
+    <!-- What section -->
+    <section class="what"> 
+        <h2>What You'll Learn</h2>
+        <p>Learn advanced tools and frameworks for developing competitive business strategies. Through case studies, discussions, and group exercise, you'll deepen your understanding of market and cost dynamics, varied business models, and how to maximize your strategic advantage to disrupt the competition.</p>
+        <br>
+        <p>Neither your competitors, nor your colleagues, can make important business decisions with 100% certainty. What successful leaders need is a strong understanding of how to develop a strong, competitive business strategy and strategic analysis skills to make confident decisions. This advanced business strategy program is designed to equip you with these skills so you can navigate critical strategic decisions during a pivotal point in your career.</p>
+        <br>
+        <p>The advanced business strategy program is ideal for a wide range of individuals, including senior leaders, leaders transitioning into new roles, and strategy and finance professionals.</p>
+        
+        <br><br><br><br>
+        <ul type="number">
+            <li>Learn how to maximize strategic advantage and create industry disruption with an integrated, sustainable business model.</li>    
+            <li>Expand your ability to analyze market and cost dynamics.</li>    
+            <li>How to design and analyze business models</li>    
+            <li>Identifying cracks in others’ business models, to direct your competitive business strategy</li>    
+        </ul>
+        </ul>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="instructors">
+        <h1>Your Instructor</h1>
+        <div class="instructor-boxes">
+            <div class="instructor-box">
+                <img src="courseImage\Ronald.jpg">
+                <h2>Ronald Heifetz</h2>
+                <p>Founder, Center for Public Leadership; King Hussein Bin Talal Senior Lecturer in Public Leadership; Harvard Kennedy School</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="related-courses">
+        <h1>Related Courses</h1>
+        <div class="course-boxes">
+            <a href="course3.html" class="course-box">
+                <img src="courseImage/leadership.jpg" alt="Course 1">
+                <div class="course-info">
+                    <h4>Exercising Leadership: Foundational Principles</h4>
+                    <p>Mobilize people to tackle tough problems and build the capacity to thrive through the dangers of change</p>
+                    <p class="additional-info">$1,850 | 4 weeks long | Available now</p>
+                </div>
+            </a>
+            <a href="course4.html" class="course-box">
+                <img src="courseImage/Entrepreneurship Essentials.avif" alt="Course 1">
+                <div class="course-info">
+                    <h4>Entrepreneurship Essentials</h4>
+                    <p>Make your Entrepreneurial dreams a reality by mastering a proven framework that entrepreneurs&nbsp</p>
+                    <p class="additional-info">Free | 4 weeks long | Opens Feb 5</p>
+                </div>
+            </a>
+            <a href="course9.html" class="course-box">
+                <img src="courseImage/Authentic Leadership.webp" alt="Course 1">
+                <div class="course-info">
+                    <h4>Authentic Leadership</h4>
+                    <p>Develop mindfulness and authenticity to build trust, create engagement, and promote productivity.</p>
+                    <p class="additional-info">2 weeks long | Open Feb 3</p>
+                </div>
+            </a>
+            <a href="course10.html" class="course-box">
+                <img src="courseImage/Advanced Business Strateggy.jpg" alt="Course 1">
+                <div class="course-info">
+                    <h4>Advanced Business Strategy</h4>
+                    <p>Learn a new framework for developing a business strategy.</p>
+                    <p class="additional-info">5 weeks long | Open Jan 29</p>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-subscribe">
+                <h3>Subscribe to our newsletter</h3>
+                <p>Stay updated with the latest courses and resources.</p>
+                <form action="#" class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>&copy; 2025 LearnHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

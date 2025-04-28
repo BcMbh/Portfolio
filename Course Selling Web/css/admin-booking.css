@@ -1,0 +1,140 @@
+.content {
+  margin-left: 270px;
+  padding: 20px;
+  font-family: "Kumbh sans",serif;
+}
+
+form#addBookingForm {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px grey;
+  margin-bottom: 20px;
+  max-width: 600px;
+
+}
+
+form#addBookingForm h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0f437f;
+}
+
+form#addBookingForm .form-group {
+  margin-bottom: 15px;
+}
+
+form#addBookingForm label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  
+}
+
+form#addBookingForm input,
+form#addBookingForm button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+form#addBookingForm input:focus {
+  border-color: #0f437f;
+  box-shadow: 0 0 4px darkblue;
+}
+
+form#addBookingForm button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Kumbh sans",serif;
+}
+
+form#addBookingForm button:hover {
+  opacity: 0.9;
+}
+
+
+#bookingTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  font-family: "Kumbh sans",serif;
+}
+
+#bookingTable th,
+#bookingTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#bookingTable thead {
+  background-color: #0f437f;
+  color: white;
+}
+
+#bookingTable tbody tr:hover {
+  background-color: whitesmoke;
+}
+
+.status-label {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  font-family: "Kumbh sans",serif;
+}
+
+.status-label.confirmed {
+  background-color: green; 
+}
+
+.status-label.pending {
+  background-color:orange;
+  color: #333;
+}
+
+.status-label.cancelled {
+  background-color: red;
+}
+
+.status-select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-family: "Kumbh sans",serif;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.delete-btn:hover {
+  opacity: 0.9;
+}

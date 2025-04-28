@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>
+    <title>Blog Section</title>
+    <link rel="stylesheet" href="css/about.css">
+    <style>
+        body {
+            margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f7f9fc;
+}
+        
+
+        .blog-section {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .blog-date {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .blog-description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #fff;
+            padding: 15px 8%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #007BFF;
+            margin: 0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #555;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #007BFF;
+        }
+
+
+        
+  
+  
+
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">📖 LearnHub</h2>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="BF-main.html" class="nav-link">Home</a></li> 
+               <li class="nav-item"><a href="BF-about.html" class="nav-link">About</a></li>
+               <li class="nav-item"><a href="login-page.html" class="nav-link">Courses</a></li>
+               <li class="nav-item"><a href="BF-contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="header-buttons">
+                <a href="login-page.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+             </div>
+        </nav>
+    </header>
+
+
+   
+
+    <section class="blog-intro">
+        <h2>About us</h2>
+        <p>Our mission is to make education accessible, innovative, and transformative for learners of all ages and backgrounds.</p>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+        <h1>Why learn with our courses?</h1>
+        <div class="cards">
+          <div class="card">
+            <h2>1. Learn</h2>
+            <p>Explore a diverse range of topics and develop skills that matter.
+             Learn anytime, anywhere with resources designed for every level.</p>
+          </div>
+          <div class="card">
+            
+            <h2>2. Graduate</h2>
+            <p>Gain the knowledge and credentials to succeed.
+                Celebrate your accomplishments with a globally recognized certificate.</p>
+          </div>
+          <div class="card">
+            <h2>3. Work</h2>
+            <p>Transform your knowledge into opportunities.
+            Build a career with practical skills and expert guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="background-section">
+        <div class="background-container">
+            <div class="background-image">
+                <img src="images/Graduation.jpeg" alt="Background Image">
+            </div>
+            <div class="background-content">
+                <h2>Our Background</h2>
+                <p>We are committed to empowering students of all ages and backgrounds here at LearnHub. We were founded in 2009 with the intention of using LearnHub to provide excellent education to everyone, everywhere, at any time.
+                    <br>The only goal we have had since the start of our journey has been to make it possible for everyone, even in old age, to obtain a high-quality education. Over time, we have grown into a comprehensive platform that offers a wide range of courses, resources, and designed to help you achieve your learning goals.
+                    <br>At LearnHub, we truly believe in the importance of knowledge and lifelong learning. Our team of enthusiastic professionals and skilled educators works hard to create exciting and efficient learning opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+    <section class="story-section">
+        <div class="story-container">
+            <div class="story-content">
+                <h2>Our Story</h2>
+                <p>LearnHub was founded in 2009 with a mission to make high-quality education accessible to everyone, regardless of age or background. We offer a wide range of courses and resources designed to help learners achieve their goals, anytime and anywhere. Our passionate team of educators and professionals is dedicated to fostering lifelong learning and personal growth. At LearnHub, we believe that knowledge has the power to transform lives, and we are committed to empowering individuals through accessible and innovative education.</p>
+            </div>
+            <div class="story-image">
+                <img src="images/graduations.jpeg" alt="Story Image">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-subscribe">
+                <h3>Subscribe to our newsletter</h3>
+                <p>Stay updated with the latest courses and resources.</p>
+                <form action="#" class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="BF-main.html">Home</a></li>
+                        <li><a href="BF-about.html">About</a></li>
+                        <li><a href="login-page.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="login-page.html">Feedback</a></li>
+                        <li><a href="BF-contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>&copy; 2025 LearnHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

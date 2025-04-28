@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Kumbh Sans", serif;
+            background: linear-gradient(120deg, #007BFF, #00D4FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: linear-gradient(120deg, #007BFF, #00D4FF);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px black;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #333;
+        }
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: "Kumbh Sans", serif;
+        }
+        .container button {
+            width: 100%;
+            padding: 15px;
+            background-color: #0f437f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .container button:hover {
+            background-color: #1e3d60;
+        }
+        .container img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+        .container a {
+            font-size: 14px;
+            color: #000000;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .container a:hover {
+            text-decoration: underline;
+            color: #0f437f;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <img src="images/human-icon.jpg" alt="Sign Up">
+        <h2>Create an Account</h2>
+        <form action="loading-forgot.html">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+</body>
+</html>

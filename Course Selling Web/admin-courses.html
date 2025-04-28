@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Manage Courses</title>
+    <link rel="stylesheet" href="css/admin-page.css">
+    <link rel="stylesheet" href="css/admin-courses.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-name">
+            <h2>LearnHub</h2>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for courses...">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        
+        <div class="admin-profile">
+            <img src="image/human-icon.jpg" alt="Admin profile picture">
+            <span>Admin</span>
+            <div class="dropdown">
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+                <ul class="dropdown-menu">
+                    <li><a href="admin-profile.html">Admin Profile</a></li>
+                    <hr>
+                    <li><a href="admin-sales-report.html">Sales Report</a></li>
+                    <li><a href="login-page.html">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="menu-items">
+            <li><a href="admin-page.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+            <li><a href="admin-staff.html"><i class="fas fa-users"></i> <span>Staff</span></a></li>
+            <li><a href="admin-member.html"><i class="fas fa-user"></i> <span>Member</span></a></li>
+            <li class="active"><a href="#"><i class="fas fa-book"></i> <span>Course</span></a></li>
+            <li><a href="admin-category.html"><i class="fas fa-folder"></i> <span>Category Course</span></a></li>
+            <li><a href="admin-booking.html"><i class="fas fa-calendar"></i> <span>Booking</span></a></li>
+        </ul>
+    </div>
+
+    <div class="content">       
+        <section>   
+            <form id="addCourseForm">
+                <h3>Add New Course</h3>
+                <div class = "form-group">
+                    <label for="courseId">Course ID:</label>
+                    <input type="text" id="courseId" name="courseId" placeholder="e.g. E 101" required>
+                    <label for="courseName">Course Name:</label>
+                    <input type="text" id="courseName" name="courseName" placeholder="e.g. Writing" required><br><br>
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" name="category" placeholder="e.g. English" required>
+                    <label for="instructorName">Instructor:</label>
+                    <input type="text" id="instructorName" name="instructorName" placeholder="John..." required><br><br>
+    
+                    <button type="submit" class ="add-course-btn">Add Course </button>
+                </div>
+                
+            </form>
+        </section>
+
+        <section>
+            <h3>Courses List</h3>
+            <table id="courseTable">
+                <thead>
+                    <tr>
+                        <th colspan="2">Course</th>
+                        <th>Name</th>
+                        <th>Instructor</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>English</td>
+                        <td>E 101</td>
+                        <td>Reading & Writing</td>
+                        <td>John Doe</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>E 102</td>
+                        <td>Advanced Writing</td>
+                        <td>Jane Smith</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Math</td>
+                        <td>M 101</td>
+                        <td>Scientific Math</td>
+                        <td>Mary Jane</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>S 101</td>
+                        <td>Social Science</td>
+                        <td>Billy Fin</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+      
+      document.getElementById('addCourseForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const courseId = document.getElementById('courseId').value;
+    const courseName = document.getElementById('courseName').value;
+    const category = document.getElementById('category').value;
+    const instructorName = document.getElementById('instructorName').value;
+
+    const newRow = `
+        <tr>
+            <td>${category}</td>
+            <td>${courseId}</td>
+            <td>${courseName}</td>
+            <td>${instructorName}</td>
+            <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+    `;
+
+    const tableBody = document.querySelector('#courseTable tbody');
+    tableBody.innerHTML += newRow;
+
+    alert(`New course added: ${courseName} by ${instructorName}`);
+
+    document.getElementById('addCourseForm').reset();
+});
+
+    </script>
+</body>
+</html>

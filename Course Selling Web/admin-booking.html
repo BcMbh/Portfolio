@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Manage Booking</title>
+    <link rel="stylesheet" href="css/admin-page.css">
+    <link rel="stylesheet" href="css/admin-booking.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="header-name">
+            <h2>LearnHub</h2>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for courses...">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        
+        <div class="admin-profile">
+            <img src="image/human-icon.jpg" alt="Admin profile picture">
+            <span>Admin</span>
+            <div class="dropdown">
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+                <ul class="dropdown-menu">
+                    <li><a href="admin-profile.html">Admin Profile</a></li>
+                    <hr>
+                    <li><a href="admin-sales-report.html">Sales Report</a></li>
+                    <li><a href="login-page.html">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="menu-items">
+            <li><a href="admin-page.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+            <li><a href="admin-staff.html"><i class="fas fa-users"></i> <span>Staff</span></a></li>
+            <li><a href="admin-member.html"><i class="fas fa-user"></i> <span>Member</span></a></li>
+            <li><a href="admin-courses.html"><i class="fas fa-book"></i> <span>Course</span></a></li>
+            <li><a href="admin-category.html"><i class="fas fa-folder"></i> <span>Category Course</span></a></li>
+            <li class="active"><a href="#"><i class="fas fa-calendar"></i> <span>Booking</span></a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <section>
+            <h3>Add New Booking</h3>
+            <form id="addBookingForm">
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <input type="text" id="course" name="course" placeholder="e.g. English Writing" required>
+                </div>
+                <div class="form-group">
+                    <label for="courseId">Course ID:</label>
+                    <input type="text" id="courseId" name="courseId" placeholder="e.g. E101" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingName">Booking Name:</label>
+                    <input type="text" id="bookingName" name="bookingName" placeholder="e.g. John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. john.doe@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. +123456789" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="submit" class="add-booking-btn">Add Booking</button>
+            </form>
+        </section>
+    
+        <section class ="booking-list">
+            <h3>Booking List</h3>
+            <table id="bookingTable">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                        <th>Booking Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>English Writing</td>
+                        <td>E101</td>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>+123456789</td>
+                        <td>2025-01-10</td>
+                        <td class="status-cell">
+                            <span class="status-label pending">Pending</span>
+                        </td>
+                        <td>
+                            <select class="status-select">
+                                <option value="confirmed">Confirm</option>
+                                <option value="pending" selected>Pending</option>
+                                <option value="cancelled">Cancel</option>
+                            </select>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+
+
+    <script>
+
+
+    document.getElementById('addBookingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+  
+    const course = document.getElementById('course').value;
+    const courseId = document.getElementById('courseId').value;
+    const bookingName = document.getElementById('bookingName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const date = document.getElementById('date').value;
+
+    const newRow = `
+        <tr>
+            <td>${course}</td>
+            <td>${courseId}</td>
+            <td>${bookingName}</td>
+            <td>${email}</td>
+            <td>${phone}</td>
+            <td>${date}</td>
+            <td class="status-cell">
+                <span class="status-label pending">Pending</span>
+            </td>
+            <td>
+                <select class="status-select">
+                    <option value="confirmed">Confirm</option>
+                    <option value="pending" selected>Pending</option>
+                    <option value="cancelled">Cancel</option>
+                </select>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+    `;
+
+ 
+    document.querySelector('#bookingTable tbody').insertAdjacentHTML('beforeend', newRow);
+
+
+    e.target.reset();
+
+    alert('New booking added successfully.');
+});
+
+
+document.querySelector('#bookingTable').addEventListener('change', function (e) {
+    if (e.target.classList.contains('status-select')) {
+        const row = e.target.closest('tr');
+        const statusCell = row.querySelector('.status-cell .status-label');
+        const newStatus = e.target.value;
+
+        statusCell.textContent = newStatus.charAt(0).toUpperCase() + newStatus.slice(1);
+        statusCell.className = `status-label ${newStatus}`;
+    }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Manage Category</title>
+    <link rel="stylesheet" href="css/admin-page.css">
+    <link rel="stylesheet" href="css/admin-category.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="header-name">
+            <h2>LearnHub</h2>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for courses...">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        
+        <div class="admin-profile">
+            <img src="image/human-icon.jpg" alt="Admin profile picture">
+            <span>Admin</span>
+            <div class="dropdown">
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+                <ul class="dropdown-menu">
+                    <li><a href="admin-profile.html">Admin Profile</a></li>
+                    <hr>
+                    <li><a href="admin-sales-report.html">Sales Report</a></li>
+                    <li><a href="login-page.html">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="menu-items">
+            <li><a href="admin-page.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+            <li><a href="admin-staff.html"><i class="fas fa-users"></i> <span>Staff</span></a></li>
+            <li><a href="admin-member.html"><i class="fas fa-user"></i> <span>Member</span></a></li>
+            <li><a href="admin-courses.html"><i class="fas fa-book"></i> <span>Course</span></a></li>
+            <li class="active"><a href="#"><i class="fas fa-folder"></i> <span>Category Course</span></a></li>
+            <li><a href="admin-booking.html"><i class="fas fa-calendar"></i> <span>Booking</span></a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <section class="add-category-section">
+            <h3>Add New Category</h3>
+            <form id="addCategoryForm" class="form-container">
+                <div class="form-group">
+                    <label for="categoryName">Category Name:</label>
+                    <input type="text" id="categoryName" name="categoryName" placeholder="Enter category name" required>
+                </div>
+                <button type="submit" class="add-category-btn">Add Category</button>
+            </form>
+        </section>
+    
+        <section class="existing-categories-section">
+            <h3>Category List</h3>
+            <table id="categoryTable">
+                <thead>
+                    <tr>
+                        <th>Course Categories</th>
+                        <th>Courses</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>English</td>
+                        <td>12</td>
+                        <td>
+                            <button class="view-btn">View</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Math</td>
+                        <td>8</td>
+                        <td>
+                            <button class="view-btn">View</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>4</td>
+                        <td>
+                            <button class="view-btn">View</button>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+    <script>
+        document.getElementById('addCategoryForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const categoryName = document.getElementById('categoryName').value;
+    const newRow = `
+        <tr>
+            <td>${categoryName}</td>
+            <td>0</td>
+            <td>
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+    `;
+
+    document.querySelector('#categoryTable tbody').innerHTML += newRow;
+
+    alert(`Category "${categoryName}" added successfully!`);
+    document.getElementById('addCategoryForm').reset();
+});
+
+    </script>
+    
+    
+</body>
+</html>

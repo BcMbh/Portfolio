@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Admin Dashboard</title>  
+    <link rel="stylesheet" href="css/admin-page.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-name">
+            <h2>LearnHub</h2>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for anything...">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        
+        <div class="admin-profile">
+            <img src="image/human-icon.jpg" alt="Admin profile picture">
+            <span>Admin</span>
+            <div class="dropdown">
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+                <ul class="dropdown-menu">                    
+                    <li><a href="admin-profile.html">Admin Profile</a></li>
+                    <hr>
+                    <li><a href="admin-sales-report.html">Sales Report</a></li>
+                    <li><a href="login-page.html">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="menu-items">
+            <li class="active"><a href="#"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+            <li><a href="admin-staff.html"><i class="fas fa-users"></i> <span>Staff</span></a></li>
+            <li><a href="admin-member.html"><i class="fas fa-user"></i> <span>Member</span></a></li>
+            <li><a href="admin-courses.html"><i class="fas fa-book"></i> <span>Course</span></a></li>
+            <li><a href="admin-category.html"><i class="fas fa-folder"></i> <span>Category Course</span></a></li>
+            <li><a href="admin-booking.html"><i class="fas fa-calendar"></i> <span>Booking</span></a></li>
+        </ul>
+    </div>
+
+ 
+    <div class="content">
+        <div class="totals">
+            <div>
+                <h3>Total Students</h3>
+                <p id="total-students">150</p>
+            </div>
+            <div>
+                <h3>Total Courses</h3>
+                <p id="total-courses">25</p>
+            </div>
+            <div>
+                <h3>Total Videos</h3>
+                <p id="total-videos">40</p>
+            </div>
+        </div>
+        <div class="charts">
+            <h3>Charts Section</h3>
+            <p>Charts content goes here...</p>
+        </div>
+        <div class="notifications">
+            <h3>Notifications</h3>
+            <p>Notifications content goes here...</p>
+        </div>
+        <div class="tasks">
+            <h3>Tasks</h3>
+            <p>Tasks content goes here...</p>
+        </div>
+    </div>
+</body>
+</html>
