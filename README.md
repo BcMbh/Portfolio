@@ -1,6 +1,7 @@
 # Portfolio
 ## Intro
 Projects I've done in college and highschool (incomplete due to different devices)
+
 ---
 
 <details>
