@@ -26,6 +26,7 @@ Additionally, written in mind of **memory usage and multithreading traffic** due
 - [x] dynammic dash that translates with other movements
 - [x] controllable player box collider size and offset
 <br><br>
+---
 
 ### Pong
 Game that runs in the window with image and sounds.
@@ -34,9 +35,9 @@ Game that runs in the window with image and sounds.
 1. game addjust itself based on the window <br>
 2. runs in delta time <br>
 3. randomised seed <br>
-
    
 <br><br>
+---
 
 ### Snake\XoX
 Game that runs in the terminal
@@ -48,6 +49,7 @@ Game that runs in the terminal
 2. X is the player
 3. **Standing on X** will kill the player
 <br><br>
+---
 
 ### Mobile card game
 > made with MIT App Inventor
@@ -68,6 +70,7 @@ A card game inspired by UNO and Mario party
 A simple website showcasing the impacts of Climate Change
 > Made in 2022 for SM ST Patrick's Go Green Innovation.
 <br><br>
+---
 
 ### Course selling website
 Dynammic Website with both user and admin page
@@ -80,6 +83,7 @@ Dynammic Website with both user and admin page
 <summary><h2>Others :calling:</h2>
 <hr>
 </summary>
+
   
 ### Discord Bot (Replit)
 Discord bots that me and my friends wanted that the market place don't have.
@@ -94,6 +98,8 @@ Discord bots that me and my friends wanted that the market place don't have.
 3. Replit on the web so anyone can turn the bot on <br>
 
 <br><br>
+---
+
 ### WA auto message Bot
 Bot that send messages and other file types to multiple people at a certain time. that can run at the background.
 - I only used this bot ethically for my part-time and only messaging to paid members
@@ -106,6 +112,7 @@ Bot that send messages and other file types to multiple people at a certain time
 ```
 
 <br><br>
+---
 ### Reverse engineer android game (Work In Progress)
 ```
  "DISCLAIMER: This project is for educational purposes only. All reverse engineering and modifications were performed legally and ethically within a controlled, non-commercial environment. No part of the modded game is distributed or intended to interfere with official servers or users. The project respects the intellectual property rights of the original developers."
