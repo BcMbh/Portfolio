@@ -31,9 +31,10 @@ Additionally, written in mind of **memory usage and multithreading traffic** due
 Game that runs in the window with image and sounds.
 > written in Love2D, a minimalist game framework
 <br>
-1. game addjust itself based on the window
-2. runs in delta time
-3. randomised seed
+1. game addjust itself based on the window <br>
+2. runs in delta time <br>
+3. randomised seed <br>
+
    
 <br><br>
 
