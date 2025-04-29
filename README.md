@@ -41,6 +41,7 @@ Game that runs in the window with image and sounds.
 ### Snake\XoX
 Game that runs in the terminal
 > School Project
+
 <br><br>
 **Instructions**
 1. Complete **a line to spawn food** 
@@ -81,9 +82,22 @@ Dynammic Website with both user and admin page
 </summary>
   
 ### Discord Bot (Replit)
+Discord bots that me and my friends wanted that the market place don't have.
+- JSON and txt file not included but can read
+> Made with replit
+<br>
+**Reasons:**
+1. Replit help skip the signup requirement by Oracle to use JDK
+2. Replit help setup the php server to run the bot
+3. Replit on the web so anyone can turn the bot on
 
 <br><br>
 ### WA auto message Bot
+Bot that send messages and other file types to multiple people at a certain time. that can run at the background.
+```
+ "DISCLAIMER: This script is intended for educational or responsible use only. I do NOT support spamming, abuse, or misuse of this tool."
+```
+- I only used this bot ethically for my part-time and only targetting to paid members of the company
 
 <br><br>
 ### Reverse engineer android game (Work In Progress)
