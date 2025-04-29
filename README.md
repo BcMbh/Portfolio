@@ -6,7 +6,7 @@ Projects I've done in college and highschool (incomplete due to different device
 
 <details>
 <summary><h2>Game Dev</h2></summary>
----
+<hr>
   
 #### 2D platformer
 
@@ -20,7 +20,7 @@ Projects I've done in college and highschool (incomplete due to different device
 
 <details>
 <summary><h2>Web Dev</h2></summary>
----
+<hr>
   
 #### Go Green Website
 
@@ -30,7 +30,7 @@ Projects I've done in college and highschool (incomplete due to different device
 
 <details>
 <summary><h2>Others </h2></summary>
----
+<hr>
   
 #### Discord Bot (Replit)
 
