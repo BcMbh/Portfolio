@@ -9,7 +9,7 @@ Projects I've done in college and highschool (incomplete due to different device
 <hr>
 </summary>
   
-#### 2D platformer
+### 2D platformer
 Custom rigidbody and addForce script from Unity that gives **full control** of player movement.
 Additionally, written in mind of **memory usage and multithreading traffic** due to limitation of old device(2gb ram) when this code was written 
 > Written in Unity 2019
@@ -25,16 +25,15 @@ Additionally, written in mind of **memory usage and multithreading traffic** due
 - [x] dynammic dash that translates with other movements
 - [x] controllable player box collider size and offset
 
-#### Pong
+### Pong
 Game that runs in the window with image and sounds.
 > written in Love2D, a minimalist game framework
->  ws and ^v for controls
 
 1. game addjust itself based on the window
 2. runs in delta time
 3. randomised seed
 
-#### Snake\XoX
+### Snake\XoX
 Game that runs in the terminal
 > School Project
 
@@ -43,22 +42,13 @@ Game that runs in the terminal
 2. X is the player
 3. **Standing on X** will kill the player
 
-The controls for XoX:
- 7 | 8 | 9
-___|___|___
- 4 | 5 | 6
-___|___|___
- 1 | 2 | 3
-   |   |
-The controls for Snake:
-'w' to move up
-'s' to move down
-'a' to move left
-'d' to move right.
 
+### Mobile card game
+> made with MIT App Inventor
 
-#### Mobile card game
-
+A card game inspired by UNO and Mario party
+- Role dices and play cards
+- Scoreboard with firbase
 
 </details>
 
@@ -67,9 +57,15 @@ The controls for Snake:
 <hr>
 </summary>
   
-#### Go Green Website
+### Go Green Website
+A simple website showcasing the impacts of Climate Change
+> Made in 2022 for SM ST Patrick's Go Green Innovation.
 
-#### Course selling website
+
+### Course selling website
+Dynammic Website with both user and admin page
+> School Project
+
 
 </details>
 
@@ -78,11 +74,12 @@ The controls for Snake:
 <hr>
 </summary>
   
-#### Discord Bot (Replit)
+### Discord Bot (Replit)
 
-#### WA auto message Bot
 
-#### Reverse engineer android game (Work In Progress)
+### WA auto message Bot
+
+### Reverse engineer android game (Work In Progress)
 
 </details>
 
