@@ -115,9 +115,9 @@ Bot that send messages and other file types to multiple people at a certain time
 **Steps for unity based android game:** <br>
 1. Root device/ get apk (xapk requires ziping and decomplie)
 2. Use apktool to decomiple apk (loacte dat and so file)
-3. Deobfuscation & Decompilation:
-    Static & Dynammic analysis: Cheat engine, Ghidra, Android Studio
-   **Or**
+3. Deobfuscation & Decompilation: <br>
+    Static & Dynammic analysis: Cheat engine, Ghidra, Android Studio <br>
+   **Or** <br>
    Injection: Binary Ninja, Frida
 4. Use dnSpy to modify the game 
 
