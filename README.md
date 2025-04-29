@@ -95,8 +95,10 @@ Discord bots that me and my friends wanted that the market place don't have.
 ### WA auto message Bot
 Bot that send messages and other file types to multiple people at a certain time. that can run at the background.
 - I only used this bot ethically for my part-time and only messaging to paid members
--! Currently pyWhatkit only work with specific browser version 
+- !Currently pyWhatkit only work with specific browser version
+- 
 <br>
+
 ```
  "DISCLAIMER: This script is intended for educational or responsible use only. I do NOT support spamming, abuse, or misuse of this tool."
 ```
