@@ -87,20 +87,27 @@ Discord bots that me and my friends wanted that the market place don't have.
 > Made with replit
 <br>
 **Reasons:**
-1. Replit help skip the signup requirement by Oracle to use JDK
-2. Replit help setup the php server to run the bot
-3. Replit on the web so anyone can turn the bot on
+1. Replit help skip the signup requirement by Oracle to use JDK <br>
+2. Replit help setup the php server to run the bot <br>
+3. Replit on the web so anyone can turn the bot on <br>
 
 <br><br>
 ### WA auto message Bot
 Bot that send messages and other file types to multiple people at a certain time. that can run at the background.
+- I only used this bot ethically for my part-time and only messaging to paid members
+-! Currently pyWhatkit only work with specific browser version 
+<br>
 ```
  "DISCLAIMER: This script is intended for educational or responsible use only. I do NOT support spamming, abuse, or misuse of this tool."
 ```
-- I only used this bot ethically for my part-time and only targetting to paid members of the company
 
 <br><br>
 ### Reverse engineer android game (Work In Progress)
+```
+ "DISCLAIMER: This project is for educational purposes only. All reverse engineering and modifications were performed legally and ethically within a controlled, non-commercial environment. No part of the modded game is distributed or intended to interfere with official servers or users. The project respects the intellectual property rights of the original developers."
+```
+<br>
+
 
 </details>
 
