@@ -1,0 +1,180 @@
+/* resetting browser stuff */
+*     {
+    box-sizing: border-box;
+  }
+  html,
+  body   {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    width: 100%; 
+  }
+  
+  /*overall page */
+  body     {
+    background: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* header */
+  header   {
+    background: #222;
+    color: #FFF;
+    padding: 20px 30px;
+    top: 0; 
+    width: 100%; 
+    position:fixed;
+    overflow: hidden;
+  }
+  
+  
+  /* logo */
+  #logo         {
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    width: 49%;
+  }
+  #logo img    {
+    width: 50px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  #logo span   {
+    display: inline-block;
+  }
+  
+  /* main navigation */
+  nav     {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+    position:absolute;
+  }
+  nav ul   {
+    list-style: none;
+    margin: 0;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a    {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: 0.3s ease all;
+  }
+  nav ul li a:hover   {
+    background: #444;
+  }
+  
+  /* styling our footer */
+  footer   {
+    background: #222;
+    color: #777;
+    padding: 40px;
+    text-align: center;
+  }
+  footer img   {
+    display: block;
+    border-radius: 5px;
+    width: 80px;
+    margin: 0 auto 10px;
+  }
+  
+  /*main content */
+  /*main content */
+  /*main content */
+  .hero           {
+    text-align: center;
+    background-color:#FFF;
+    font-size: 10px;
+    margin: 0;
+    padding-bottom: 50px;
+  }
+  .hero-content   {
+    padding-top: 100px;
+  }
+  .hero-content h1   {
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    margin: 0;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  
+  /* basic site sections */
+  .warm {
+    padding-bottom: 70px;
+    padding-top: 20px;
+    background:white;
+    margin-left:100px;
+  }
+  .warm-Head h2  {
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .warm-content{
+    background-color:#e7e7e7;
+    color:#222;
+    font-size: 20px;
+    padding: 30px 40px;
+    width:80%;
+  }
+  .vid {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    background:white;
+    text-align:center;
+  }
+  .site-section-secondary   {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background: #EFEFEF;
+  }
+  .site-section-inside   {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-header   {
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color:#222;
+  }
+  
+  /* feature boxes */
+  .content-box   {
+    display: inline-block;
+    width: 35%;
+    padding: 15px 20px;
+  }
+  .content-author img {
+    width: 200px;
+    height: 150px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .content-author h5   {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-top:10px;
+    vertical-align: middle;
+  }
+  .content-des   {
+    background: #FFF;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
