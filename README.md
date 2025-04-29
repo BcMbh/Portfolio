@@ -86,7 +86,9 @@ Discord bots that me and my friends wanted that the market place don't have.
 - JSON and txt file not included but can read
 > Made with replit
 <br>
+
 **Reasons:**
+<br>
 1. Replit help skip the signup requirement by Oracle to use JDK <br>
 2. Replit help setup the php server to run the bot <br>
 3. Replit on the web so anyone can turn the bot on <br>
@@ -110,6 +112,14 @@ Bot that send messages and other file types to multiple people at a certain time
 ```
 <br>
 
+**Steps for unity based android game:** <br>
+1. Root device/ get apk (xapk requires ziping and decomplie)
+2. Use apktool to decomiple apk (loacte dat and so file)
+3. Deobfuscation & Decompilation:
+    Static & Dynammic analysis: Cheat engine, Ghidra, Android Studio
+   **Or**
+   Injection: Binary Ninja, Frida
+4. Use dnSpy to modify the game 
 
 </details>
 
