@@ -34,6 +34,7 @@ Game that runs in the window with image and sounds.
 1. game addjust itself based on the window
 2. runs in delta time
 3. randomised seed
+   
 <br><br>
 
 ### Snake\XoX
