@@ -44,7 +44,9 @@ Game that runs in the window with image and sounds.
 ### Snake\XoX
 Game that runs in the terminal
 > School Project
+
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png)
+
 <br><br>
 **Instructions**
 1. Complete **a line to spawn food** 
@@ -60,7 +62,10 @@ A card game inspired by UNO and Mario party
 - Role dices and play cards
 - Scoreboard with firbase
 <br>
+
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.jpg)
+<br>
+
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.png)
 </details>
 
@@ -73,7 +78,9 @@ A card game inspired by UNO and Mario party
 ### Go Green Website
 A simple website showcasing the impacts of Climate Change
 > Made in 2022 for SM ST Patrick's Go Green Innovation.
-> ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/GGImage.png)
+
+![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/GGImage.png)
+
 <br><br>
 ---
 
@@ -82,6 +89,8 @@ Dynammic Website with both user and admin page
 > School Project
 
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage.png)
+<br>
+
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage%20(2).png)
 <br><br>
 </details>
@@ -112,6 +121,7 @@ Discord bots that me and my friends wanted that the market place don't have.
 Bot that send messages and other file types to multiple people at a certain time. that can run at the background.
 - I only used this bot ethically for my part-time and only messaging to paid members
 > Currently pyWhatkit only work with specific browser version
+
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/WaImage.png)  
 <br>
 
@@ -137,6 +147,7 @@ Bot that send messages and other file types to multiple people at a certain time
 4. Use dnSpy to modify the game
 
 <br>
+
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/DnSpyImage.png)
 
 </details>
