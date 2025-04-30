@@ -35,7 +35,8 @@ Game that runs in the window with image and sounds.
 1. game addjust itself based on the window <br>
 2. runs in delta time <br>
 3. randomised seed <br>
-[[https://github.com/BcMbh/Portfolio/blob/main/Images/PongImage.png]]
+
+!(https://github.com/BcMbh/Portfolio/blob/main/Images/PongImage.png)
    
 <br><br>
 ---
