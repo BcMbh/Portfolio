@@ -45,14 +45,15 @@ Game that runs in the window with image and sounds.
 Game that runs in the terminal
 > School Project
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png)
-
 <br><br>
 **Instructions**
 1. Complete **a line to spawn food** 
 2. X is the player
 3. **Standing on X** will kill the player
 <br><br>
+
+![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png)
+
 ---
 
 ### Mobile card game
@@ -61,10 +62,10 @@ Game that runs in the terminal
 A card game inspired by UNO and Mario party
 - Role dices and play cards
 - Scoreboard with firbase
-<br>
+<br><br>
 
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.jpg)
-<br>
+<br><br>
 
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.png)
 </details>
@@ -88,8 +89,9 @@ A simple website showcasing the impacts of Climate Change
 Dynammic Website with both user and admin page
 > School Project
 
+<br><br>
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage.png)
-<br>
+<br><br>
 
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage%20(2).png)
 <br><br>
@@ -105,9 +107,7 @@ Dynammic Website with both user and admin page
 Discord bots that me and my friends wanted that the market place don't have.
 - JSON and txt file not included but can read
 > Made with replit
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/DSBotImage.png)
 <br>
-
 **Reasons:**
 <br>
 1. Replit help skip the signup requirement by Oracle to use JDK <br>
@@ -115,6 +115,10 @@ Discord bots that me and my friends wanted that the market place don't have.
 3. Replit on the web so anyone can turn the bot on <br>
 
 <br><br>
+![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/DSBotImage.png)
+
+<br><br>
+
 ---
 
 ### WA auto message Bot
@@ -122,14 +126,16 @@ Bot that send messages and other file types to multiple people at a certain time
 - I only used this bot ethically for my part-time and only messaging to paid members
 > Currently pyWhatkit only work with specific browser version
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/WaImage.png)  
-<br>
-
 ```
  "DISCLAIMER: This script is intended for educational or responsible use only. I do NOT support spamming, abuse, or misuse of this tool."
 ```
+<br><br>
+
+![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/WaImage.png)  
+<br>
 
 <br><br>
+
 ---
 ### Reverse engineer android game (Work In Progress)
 ```
