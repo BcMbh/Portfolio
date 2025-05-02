@@ -36,7 +36,7 @@ Game that runs in the window with image and sounds.
 2. runs in delta time <br>
 3. randomised seed <br> <br>
 
-<img width="800" src="https://github.com/BcMbh/Portfolio/blob/main/Images/PongImage.png">
+<img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/PongImage.png">
 
 <br><br>
 ---
@@ -52,7 +52,7 @@ Game that runs in the terminal
 3. **Standing on X** will kill the player
 <br><br>
 
-<img max-width="600" height=800 src="https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png">
+<img max-width="400" height="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png">
 <br>
 
 ---
@@ -67,10 +67,9 @@ A card game inspired by UNO and Mario party
   
 <br><br>
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.jpg)<img align="left" width="200">
-<br><br>
+<img width="600"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.jpg">
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.png)<img align="left" width="200">
+<img width="600"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.png">
 </details>
 
 <details>
@@ -83,7 +82,7 @@ A card game inspired by UNO and Mario party
 A simple website showcasing the impacts of Climate Change
 > Made in 2022 for SM ST Patrick's Go Green Innovation.
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/GGImage.png)
+<img width="600"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/GGImage.png">
 
 <br><br>
 ---
@@ -93,10 +92,10 @@ Dynammic Website with both user and admin page
 > School Project
 
 <br><br>
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage.png)
+<img width="800"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage.png">
 <br><br>
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage%20(2).png)
+<img width="800"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage%20(2).png">
 <br><br>
 </details>
 
@@ -118,7 +117,7 @@ Discord bots that me and my friends wanted that the market place don't have.
 3. Replit on the web so anyone can turn the bot on <br>
 
 <br><br>
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/DSBotImage.png)
+<img max-width="400" height="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/DSBotImage.png">
 
 <br><br>
 
@@ -134,7 +133,7 @@ Bot that send messages and other file types to multiple people at a certain time
 ```
 <br><br>
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/WaImage.png)  
+<img width="600"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/WaImage.png">
 <br>
 
 <br><br>
@@ -157,7 +156,7 @@ Bot that send messages and other file types to multiple people at a certain time
 
 <br>
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/DnSpyImage.png)
+<img width="600"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/DnSpyImage.png">
 
 </details>
 
