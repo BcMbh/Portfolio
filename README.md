@@ -68,6 +68,7 @@ A card game inspired by UNO and Mario party
 <br><br>
 
 <img width="600"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.jpg">
+
 <br>
 
 <img width="600" max-height="900"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.png">
@@ -118,7 +119,7 @@ Discord bots that me and my friends wanted that the market place don't have.
 3. Replit on the web so anyone can turn the bot on <br>
 
 <br><br>
-<img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/DSBotImage.png">
+<img width="600" max-height="800" src="https://github.com/BcMbh/Portfolio/blob/main/Images/DSBotImage.png">
 
 <br><br>
 
