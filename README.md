@@ -34,9 +34,9 @@ Game that runs in the window with image and sounds.
 <br>
 1. game addjust itself based on the window <br>
 2. runs in delta time <br>
-3. randomised seed <br>
+3. randomised seed <br> <br>
 
-<img width="2000" src="https://github.com/BcMbh/Portfolio/blob/main/Images/PongImage.png">
+<img width="800" src="https://github.com/BcMbh/Portfolio/blob/main/Images/PongImage.png">
 
 <br><br>
 ---
@@ -52,7 +52,8 @@ Game that runs in the terminal
 3. **Standing on X** will kill the player
 <br><br>
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png)<img align="left" width="200">
+<img max-width="600" height=800 src="https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png">
+<br>
 
 ---
 
