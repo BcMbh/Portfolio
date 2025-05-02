@@ -36,7 +36,7 @@ Game that runs in the window with image and sounds.
 2. runs in delta time <br>
 3. randomised seed <br>
 
-<img align="left" width="200" src="https://github.com/BcMbh/Portfolio/blob/main/Images/PongImage.png">
+<img width="2000" src="https://github.com/BcMbh/Portfolio/blob/main/Images/PongImage.png">
 
 <br><br>
 ---
