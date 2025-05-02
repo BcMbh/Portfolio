@@ -52,7 +52,7 @@ Game that runs in the terminal
 3. **Standing on X** will kill the player
 <br><br>
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png)
+![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/XSnakeXImage.png)<img align="left" width="200">
 
 ---
 
@@ -66,10 +66,10 @@ A card game inspired by UNO and Mario party
   
 <br><br>
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.jpg)
+![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.jpg)<img align="left" width="200">
 <br><br>
 
-![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.png)
+![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.png)<img align="left" width="200">
 </details>
 
 <details>
