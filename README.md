@@ -60,8 +60,10 @@ Game that runs in the terminal
 > made with MIT App Inventor
 <br>
 A card game inspired by UNO and Mario party
+
 - Role dices and play cards
 - Scoreboard with firbase
+  
 <br><br>
 
 ![Alt Text](https://github.com/BcMbh/Portfolio/blob/main/Images/CardsImage.jpg)
