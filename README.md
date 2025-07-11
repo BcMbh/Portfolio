@@ -90,8 +90,10 @@ A simple website showcasing the impacts of Climate Change
 ---
 
 ### Course selling website
-Dynammic Website with both user and admin page
+Dynammic Website with both user and admin page 
 > School Project
+
+[Figma Design](https://www.figma.com/design/DOdJXAR65tTvrhswrHN2Rb/Portfolio?node-id=0-1&t=GmXgq4ZRyrsfOlqR-1)
 
 <br><br>
 <img width="800"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/CourseImage.png">
