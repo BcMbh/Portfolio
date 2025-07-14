@@ -143,7 +143,7 @@ Bot that send messages and other file types to multiple people at a certain time
 <br><br>
 
 ---
-### Reverse engineer android game (Work In Progress)
+### Reverse engineer android game 
 ```
  "DISCLAIMER: This project is for educational purposes only. All reverse engineering and modifications were performed legally and ethically within a controlled, non-commercial environment. No part of the modded game is distributed or intended to interfere with official servers or users. The project respects the intellectual property rights of the original developers."
 ```
@@ -153,10 +153,10 @@ Bot that send messages and other file types to multiple people at a certain time
 1. Root device/ get apk (xapk requires ziping and decomplie)
 2. Use apktool to decomiple apk (loacte dat and so file)
 3. Deobfuscation & Decompilation: <br>
-    Static & Dynammic analysis: Cheat engine, Ghidra, Android Studio <br>
+    Static & Dynammic analysis: Kitsune Mask, Hide My App List, Objection, Ghidra, Android Studio <br>
    **Or** <br>
    Injection: Binary Ninja, Frida
-4. Use dnSpy to modify the game
+4. Use Hex editor/ Frida Gadget hook to modify the game
 
 <br>
 
