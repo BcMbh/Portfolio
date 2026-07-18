@@ -162,8 +162,6 @@ Bot that send messages and other file types to multiple people at a certain time
 
 <img width="600"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/DnSpyImage.png">
 
-</details>
-
 <br><br>
 
 ---
@@ -198,6 +196,8 @@ Zoom meetings automation written in Appscript to Make.com; while getting command
 <img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/MakeAutomation.png">
 
 <br>
+
+</details>
 
 
 
