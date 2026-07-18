@@ -172,7 +172,7 @@ A bot me and Calvin(Friend) developed together.
 
 <br>
 
-<img width="600" length="500"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/PokerAI.jpeg">
+<img width="450" height="500"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/PokerAI.jpeg">
 
 <br><br>
 
