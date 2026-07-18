@@ -1,6 +1,6 @@
 # Portfolio
 ## Intro
-Projects I've done in college and highschool (incomplete due to different devices)
+Projects I've done in highschool are not fully archieved due to different devices
 
 ---
 
