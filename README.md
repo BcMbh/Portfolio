@@ -164,6 +164,33 @@ Bot that send messages and other file types to multiple people at a certain time
 
 </details>
 
+<br><br>
+
+---
+### Texas Holdem Poker AI Tournament
+A bot me and Calvin(Friend) developed together.
+
+<br>
+
+<img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/PokerAI.jpeg">
+
+<br><br>
+
+
+---
+
+### Make & Appscript Zoom Meeting Manager
+Zoom meetings automation written in Appscript to Make.com; while getting commands from Telegram
+
+<br>
+
+1. Create,Edit,Delete Meetings
+2. Fully Compatible for instant,scheduled,Recurring Meetings
+
+<br><br>
+
+<img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/MakeAuotomation.jpeg">
+<br>
 
 
 
