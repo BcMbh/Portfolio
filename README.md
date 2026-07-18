@@ -172,7 +172,7 @@ A bot me and Calvin(Friend) developed together.
 
 <br>
 
-<img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/PokerAI.jpeg">
+<img width="600" length="500"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/PokerAI.jpeg">
 
 <br><br>
 
@@ -187,9 +187,10 @@ Zoom meetings automation written in Appscript to Make.com; while getting command
 1. Create,Edit,Delete Meetings
 2. Fully Compatible for instant,scheduled,Recurring Meetings
 
-<br><br>
+<br>
 
 <img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/MakeAuotomation.jpeg">
+
 <br>
 
 
