@@ -171,11 +171,16 @@ Bot that send messages and other file types to multiple people at a certain time
 A bot me and Calvin(Friend) developed together.
 
 <br>
+- API calls
+- Based Poker Enviroment for play tests
+- Dealer and Poker Bot
+- Server Play Test Automation
+
+<br>
 
 <img width="450" height="500"  src="https://github.com/BcMbh/Portfolio/blob/main/Images/PokerAI.jpeg">
 
-<br><br>
-
+<br>
 
 ---
 
@@ -184,12 +189,12 @@ Zoom meetings automation written in Appscript to Make.com; while getting command
 
 <br>
 
-1. Create,Edit,Delete Meetings
-2. Fully Compatible for instant,scheduled,Recurring Meetings
+- Create,Edit,Delete Meetings for Google Calendar and Zoom Calendar
+- Fully Compatible for instant,scheduled,Recurring Meetings
 
 <br>
 
-<img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/MakeAuotomation.jpeg">
+<img width="600" src="https://github.com/BcMbh/Portfolio/blob/main/Images/MakeAutomation.png">
 
 <br>
 
